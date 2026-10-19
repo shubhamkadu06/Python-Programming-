@@ -1,0 +1,37 @@
+# 1. Arithmetic Operators
+a, b = 10, 3
+print("--- Arithmetic ---")
+print(f"Addition (10 + 3): {a + b}")          # 13
+print(f"Floor Division (10 // 3): {a // b}")  # 3 (rounds down)
+print(f"Modulus/Remainder (10 % 3): {a % b}") # 1
+print(f"Exponent (10 ** 3): {a ** b}")        # 1000
+
+# 2. Comparison & Logical Operators
+x, y = 5, 12
+print("\n--- Comparison & Logical ---")
+# Combining conditions: Is x greater than 3 AND less than 10?
+is_valid = (x > 3) and (x < 10)
+print(f"Is 5 between 3 and 10? {is_valid}")  # True
+print(f"Is x not equal to y? {x != y}")       # True
+
+# 3. Assignment Operators
+score = 100
+score += 5  # Equivalent to: score = score + 5
+print("\n--- Assignment ---")
+print(f"Updated Score: {score}")             # 105
+
+# 4. Membership Operators
+fruits = ["apple", "banana", "cherry"]
+print("\n--- Membership ---")
+print(f"Is 'apple' in the list? {'apple' in fruits}")   # True
+print(f"Is 'orange' missing? {'orange' not in fruits}") # True
+
+# 5. Identity Operators
+list_one = [1, 2, 3]
+list_two = [1, 2, 3]
+list_three = list_one  # Points to the exact same object in memory
+
+print("\n--- Identity ---")
+print(f"Do they have the same values (==)? {list_one == list_two}")  # True
+print(f"Are they the exact same object (is)? {list_one is list_two}") # False
+print(f"Are one and three the same object? {list_one is list_three}") # True
