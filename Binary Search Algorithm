@@ -1,0 +1,29 @@
+def binary_search(arr, target):
+    low = 0
+    high = len(arr) - 1
+    
+    while low <= high:
+        # Prevents integer overflow (relevant in non-Python environments)
+        mid = low + (high - low) // 2
+        
+        # Check if target is present at mid
+        if arr[mid] == target:
+            return mid
+        
+        # If target is greater, ignore left half
+        elif arr[mid] < target:
+            low = mid + 1
+            
+        # If target is smaller, ignore right half
+        else:
+            high = mid - 1
+            
+    # Target was not present in the array
+    return -1
+
+# Example Usage:
+numbers = [2, 4, 7, 10, 14, 19, 23, 34, 47]
+target_value = 19
+
+result = binary_search(numbers, target_value)
+print(f"Element found at index: {result}")  # Output: Element found at index: 5
